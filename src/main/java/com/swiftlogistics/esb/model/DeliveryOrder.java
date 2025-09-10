@@ -7,24 +7,59 @@ public class DeliveryOrder {
     private String clientId;
     private String pickupAddress;
     private String deliveryAddress;
-    private String packageWeight;
-    private String status;
     private Map<String, Object> metadata;
 
-    public String getOrderId() { return orderId; }
-    public void setOrderId(String orderId) { this.orderId = orderId; }
-    public String getClientId() { return clientId; }
-    public void setClientId(String clientId) { this.clientId = clientId; }
-    public String getPickupAddress() { return pickupAddress; }
-    public void setPickupAddress(String pickupAddress) { this.pickupAddress = pickupAddress; }
-    public String getDeliveryAddress() { return deliveryAddress; }
-    public void setDeliveryAddress(String deliveryAddress) { this.deliveryAddress = deliveryAddress; }
-    public String getPackageWeight() { return packageWeight; }
-    public void setPackageWeight(String packageWeight) { this.packageWeight = packageWeight; }
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
-    public Map<String, Object> getMetadata() { return metadata; }
-    public void setMetadata(Map<String, Object> metadata) { this.metadata = metadata; }
+    // Constructors
+    public DeliveryOrder() {
+    }
+
+    public DeliveryOrder(String orderId, String clientId, String pickupAddress, String deliveryAddress) {
+        this.orderId = orderId;
+        this.clientId = clientId;
+        this.pickupAddress = pickupAddress;
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    // Getters and Setters
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getPickupAddress() {
+        return pickupAddress;
+    }
+
+    public void setPickupAddress(String pickupAddress) {
+        this.pickupAddress = pickupAddress;
+    }
+
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    public Map<String, Object> getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(Map<String, Object> metadata) {
+        this.metadata = metadata;
+    }
 
     @Override
     public String toString() {
@@ -33,6 +68,7 @@ public class DeliveryOrder {
                 ", clientId='" + clientId + '\'' +
                 ", pickupAddress='" + pickupAddress + '\'' +
                 ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", metadata=" + metadata +
                 '}';
     }
 }
