@@ -319,12 +319,11 @@ public class EsbController {
         }
     }
 
-    // 10. Emergency order cancellation
-    @DeleteMapping("/orders/{orderId}")
-    public ResponseEntity<Map<String, Object>> cancelOrder(@PathVariable String orderId) {
-        logger.info("Cancelling order: {}", orderId);
+    // 10. Emergency order cancellation with smart ID mapping
+    @DeleteMapping("/orders/cancel")
+    public ResponseEntity<Map<String, Object>> cancelOrder(@RequestParam("orderId") String orderId) {
 
-        try {
+            try {
             Map<String, Object> response = new HashMap<>();
 
             // Cancel in all systems
